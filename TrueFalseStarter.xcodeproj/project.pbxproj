@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73DED40C1D90A46B00CF1507 /* QuestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DED40B1D90A46B00CF1507 /* QuestionsModel.swift */; };
+		73DED40C1D90A46B00CF1507 /* QuestionsPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DED40B1D90A46B00CF1507 /* QuestionsPool.swift */; };
+		73DED40E1D90FED100CF1507 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DED40D1D90FED100CF1507 /* Question.swift */; };
+		73DED4101D910FBB00CF1507 /* TextQuestionsPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DED40F1D910FBB00CF1507 /* TextQuestionsPool.swift */; };
+		73DED4121D911EDD00CF1507 /* ArithmeticQuestionsPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DED4111D911EDD00CF1507 /* ArithmeticQuestionsPool.swift */; };
 		97093D3C1C913506001275BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97093D3B1C913506001275BC /* AppDelegate.swift */; };
 		97093D3E1C913506001275BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97093D3D1C913506001275BC /* ViewController.swift */; };
 		97093D411C913506001275BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97093D3F1C913506001275BC /* Main.storyboard */; };
@@ -17,7 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		73DED40B1D90A46B00CF1507 /* QuestionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsModel.swift; sourceTree = "<group>"; };
+		73DED40B1D90A46B00CF1507 /* QuestionsPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsPool.swift; sourceTree = "<group>"; };
+		73DED40D1D90FED100CF1507 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		73DED40F1D910FBB00CF1507 /* TextQuestionsPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextQuestionsPool.swift; sourceTree = "<group>"; };
+		73DED4111D911EDD00CF1507 /* ArithmeticQuestionsPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArithmeticQuestionsPool.swift; sourceTree = "<group>"; };
 		97093D381C913506001275BC /* TrueFalseStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrueFalseStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97093D3B1C913506001275BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97093D3D1C913506001275BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +71,10 @@
 				97093D441C913506001275BC /* LaunchScreen.storyboard */,
 				97093D471C913506001275BC /* Info.plist */,
 				97093D521C932116001275BC /* GameSound.wav */,
-				73DED40B1D90A46B00CF1507 /* QuestionsModel.swift */,
+				73DED40B1D90A46B00CF1507 /* QuestionsPool.swift */,
+				73DED40D1D90FED100CF1507 /* Question.swift */,
+				73DED40F1D910FBB00CF1507 /* TextQuestionsPool.swift */,
+				73DED4111D911EDD00CF1507 /* ArithmeticQuestionsPool.swift */,
 			);
 			path = TrueFalseStarter;
 			sourceTree = "<group>";
@@ -144,7 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73DED40C1D90A46B00CF1507 /* QuestionsModel.swift in Sources */,
+				73DED40C1D90A46B00CF1507 /* QuestionsPool.swift in Sources */,
+				73DED40E1D90FED100CF1507 /* Question.swift in Sources */,
+				73DED4101D910FBB00CF1507 /* TextQuestionsPool.swift in Sources */,
+				73DED4121D911EDD00CF1507 /* ArithmeticQuestionsPool.swift in Sources */,
 				97093D3E1C913506001275BC /* ViewController.swift in Sources */,
 				97093D3C1C913506001275BC /* AppDelegate.swift in Sources */,
 			);
