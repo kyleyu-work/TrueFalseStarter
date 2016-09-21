@@ -13,7 +13,7 @@ protocol QuestionPool {
   /**
    * Returns a random question.
    */
-  func getRandomQuestion() -> String?
+  func getRandomQuestion() -> Question?
   
   
   /**

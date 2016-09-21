@@ -5,7 +5,7 @@
 //  Created by Yi YU on 9/19/16.
 //  Copyright © 2016 Treehouse. All rights reserved.
 //
-import GameKit
+import GameplayKit
 
 
 class TextQuestionsPool: QuestionPool {
@@ -22,7 +22,9 @@ class TextQuestionsPool: QuestionPool {
     let q2 = Question("Blue whales are technically whales", ["True", "False"], 0)
     let q3 = Question("Camels are cannibalistic", ["True", "False"], 1)
     let q4 = Question("All ducks are birds", ["True", "False"], 0)
-    self.questionsPool = [q1, q2, q3, q4]
+    let q5 = Question("What is the best progamming lanuage?", ["Java", "C++", "Phython", "Go"], 1)
+    let q6 = Question("How about iPhone 7?", ["Awesome!", "Not fun", "Just so so"], 0)
+    self.questionsPool = [q5, q6, q1, q2, q3, q4]
     
     self.selectedQuestionIndex = 0
     askedQuestionsSet = Set<String>()
@@ -32,7 +34,7 @@ class TextQuestionsPool: QuestionPool {
   /**
    * Returns a random text question.
    */
-  func getRandomQuestion() -> String? {
+  func getRandomQuestion() -> Question? {
     // If all questions are asked, return nil
     if askedQuestionsSet.count == questionsPool.count {
       return nil
@@ -49,7 +51,7 @@ class TextQuestionsPool: QuestionPool {
     
     askedQuestionsSet.insert(selectedQuestionDesc)
     
-    return selectedQuestionDesc
+    return questionsPool[selectedQuestionIndex]
   }
   
   
