@@ -122,7 +122,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="eei-2Q-auu" secondAttribute="trailing" constant="20" id="RJQ-7u-RIb"/>
                             <constraint firstItem="I3V-ih-1Ky" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Re1-4x-Rtw"/>
                             <constraint firstItem="eei-2Q-auu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="cib-2D-Ujv"/>
-                            <constraint firstItem="eei-2Q-auu" firstAttribute="top" secondItem="I3V-ih-1Ky" secondAttribute="bottom" constant="100" id="jtX-Gd-RXb"/>
+                            <constraint firstItem="eei-2Q-auu" firstAttribute="top" secondItem="I3V-ih-1Ky" secondAttribute="bottom" constant="60" id="jtX-Gd-RXb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="I3V-ih-1Ky" secondAttribute="trailing" constant="20" id="mAb-H2-fF4"/>
                         </constraints>
                     </view>
