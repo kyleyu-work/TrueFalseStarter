@@ -21,8 +21,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var questionField: UILabel!
   @IBOutlet var answerButtons: [UIButton]!
   @IBOutlet weak var gameModeSelectButtonContainer: UIStackView!
-  
-  
+  @IBOutlet weak var playAgainButton: UIButton!
 
   override func viewDidLoad() {
       super.viewDidLoad()
@@ -30,7 +29,7 @@ class ViewController: UIViewController {
     
       // Start game
       playGameStartSound()
-      gameStart()
+      displayGameStartView()
   }
 
   override func didReceiveMemoryWarning() {
@@ -42,8 +41,18 @@ class ViewController: UIViewController {
   /**
    * Display game start view.
    */
-  fileprivate func gameStart() {
-    displayScore()
+  fileprivate func displayGameStartView() {
+    // Hide answer choice buttons
+    for answerButton in answerButtons {
+      answerButton.isHidden = true
+    }
+    
+    // Hide play again buttons.
+    playAgainButton.isHidden = true
+    
+    // Show game mode select buttons.
+    gameModeSelectButtonContainer.isHidden = false
+
     questionField.text = "Select question types to start the game."
   }
 
@@ -69,6 +78,8 @@ class ViewController: UIViewController {
     // If cannot get a question from pool, means all questions are asked.
     if let selectedQuestion = questionPool!.getRandomQuestion() {
       questionField.text = selectedQuestion.getQuestionDescription()
+      
+      // Display the answer choice buttons for the question.
       var idx = 0
       for choice in selectedQuestion.getQuestionChoices() {
         answerButtons[idx].setTitle(choice, for: UIControlState.normal)
@@ -81,6 +92,10 @@ class ViewController: UIViewController {
         idx += 1
       }
       
+      // Hide the play Again button.
+      playAgainButton.isHidden = true
+      
+      // Hide the game mode select buttons.
       gameModeSelectButtonContainer.isHidden = true
     } else {
       displayScore()
@@ -92,14 +107,19 @@ class ViewController: UIViewController {
    * Display score stats.
    */
   fileprivate func displayScore() {
+    // Hide the answer choice buttons.
     for answerButton in answerButtons {
       answerButton.isHidden = true
     }
-    gameModeSelectButtonContainer.isHidden = false
+    
+    // Hide the game mode select buttons.
+    gameModeSelectButtonContainer.isHidden = true
+    
+    // Show the play again button
+    playAgainButton.isHidden = false
     
     questionField.text =
         "Way to go!\nYou got \(correctQuestions) out of \(questionsPerRound) correct!"
-      
   }
   
   
@@ -108,7 +128,7 @@ class ViewController: UIViewController {
    */
   @IBAction func selectKnowledgeTestMode(_ sender: UIButton) {
     questionPool = TextQuestionsPool()
-    playAgain()
+    displayNextQuestionOrScore()
   }
 
 
@@ -117,7 +137,7 @@ class ViewController: UIViewController {
    */
   @IBAction func selectMathTestMode(_ sender: UIButton) {
     questionPool = ArithmeticQuestionsPool()
-    playAgain()
+    displayNextQuestionOrScore()
   }
   
   
@@ -142,9 +162,9 @@ class ViewController: UIViewController {
   /**
    * Start a new round after users pressed "Play Again" button.
    */
-  fileprivate func playAgain() {
+  @IBAction func playAgain() {
     resetGameStats()
-    displayNextQuestionOrScore()
+    displayGameStartView()
   }
 
 
