@@ -115,15 +115,26 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="HHj-SC-0uV"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time left: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRv-Jb-AfK">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="LEL-Dv-9Nq"/>
+                                    <constraint firstAttribute="height" constant="30" id="lYj-r3-a6Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549019607843" green="0.16862745098039217" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="I3V-ih-1Ky" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="OBu-Zg-7RM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eei-2Q-auu" secondAttribute="trailing" constant="20" id="RJQ-7u-RIb"/>
                             <constraint firstItem="I3V-ih-1Ky" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Re1-4x-Rtw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QRv-Jb-AfK" secondAttribute="trailing" constant="20" id="a9j-UK-K2s"/>
                             <constraint firstItem="eei-2Q-auu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="cib-2D-Ujv"/>
                             <constraint firstItem="eei-2Q-auu" firstAttribute="top" secondItem="I3V-ih-1Ky" secondAttribute="bottom" constant="60" id="jtX-Gd-RXb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="I3V-ih-1Ky" secondAttribute="trailing" constant="20" id="mAb-H2-fF4"/>
+                            <constraint firstItem="QRv-Jb-AfK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="op9-4U-kof"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -131,6 +142,7 @@
                         <outlet property="gameModeSelectButtonContainer" destination="tmX-Bs-gUm" id="n9b-ia-xd1"/>
                         <outlet property="playAgainButton" destination="RGN-qD-gWg" id="uTF-Sc-UyJ"/>
                         <outlet property="questionField" destination="I3V-ih-1Ky" id="7UI-o2-ATi"/>
+                        <outlet property="timerLabel" destination="QRv-Jb-AfK" id="5Ss-fE-ivI"/>
                         <outletCollection property="answerButtons" destination="gER-ZP-iVH" collectionClass="NSMutableArray" id="ksF-Th-tXW"/>
                         <outletCollection property="answerButtons" destination="MUX-6i-F95" collectionClass="NSMutableArray" id="czA-53-sF9"/>
                         <outletCollection property="answerButtons" destination="Fw1-oG-cei" collectionClass="NSMutableArray" id="5DY-ED-7AM"/>
