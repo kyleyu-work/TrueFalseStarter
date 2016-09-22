@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7389B6B01D939B12004F568D /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7389B6AE1D939B12004F568D /* correct.wav */; };
+		7389B6B11D939B12004F568D /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7389B6AF1D939B12004F568D /* wrong.wav */; };
 		73DED40C1D90A46B00CF1507 /* QuestionsPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DED40B1D90A46B00CF1507 /* QuestionsPool.swift */; };
 		73DED40E1D90FED100CF1507 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DED40D1D90FED100CF1507 /* Question.swift */; };
 		73DED4101D910FBB00CF1507 /* TextQuestionsPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DED40F1D910FBB00CF1507 /* TextQuestionsPool.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7389B6AE1D939B12004F568D /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
+		7389B6AF1D939B12004F568D /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong.wav; sourceTree = "<group>"; };
 		73DED40B1D90A46B00CF1507 /* QuestionsPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsPool.swift; sourceTree = "<group>"; };
 		73DED40D1D90FED100CF1507 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		73DED40F1D910FBB00CF1507 /* TextQuestionsPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextQuestionsPool.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 				97093D441C913506001275BC /* LaunchScreen.storyboard */,
 				97093D471C913506001275BC /* Info.plist */,
 				97093D521C932116001275BC /* GameSound.wav */,
+				7389B6AE1D939B12004F568D /* correct.wav */,
+				7389B6AF1D939B12004F568D /* wrong.wav */,
 				73DED40B1D90A46B00CF1507 /* QuestionsPool.swift */,
 				73DED40D1D90FED100CF1507 /* Question.swift */,
 				73DED40F1D910FBB00CF1507 /* TextQuestionsPool.swift */,
@@ -142,6 +148,8 @@
 				97093D531C932116001275BC /* GameSound.wav in Resources */,
 				97093D461C913506001275BC /* LaunchScreen.storyboard in Resources */,
 				97093D431C913506001275BC /* Assets.xcassets in Resources */,
+				7389B6B01D939B12004F568D /* correct.wav in Resources */,
+				7389B6B11D939B12004F568D /* wrong.wav in Resources */,
 				97093D411C913506001275BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

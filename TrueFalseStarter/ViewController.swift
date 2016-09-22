@@ -17,6 +17,8 @@ class ViewController: UIViewController {
   fileprivate var questionsAsked = 0
   fileprivate var correctQuestions = 0
   fileprivate var gameSound: SystemSoundID = 0
+  fileprivate var correctAnswerSound: SystemSoundID = 0
+  fileprivate var wrongAnswerSound: SystemSoundID = 0
   
   @IBOutlet weak var questionField: UILabel!
   @IBOutlet var answerButtons: [UIButton]!
@@ -26,6 +28,8 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
       super.viewDidLoad()
       loadGameStartSound()
+      loadCorrectAnswerSound()
+      loadWrongAnswerSound()
     
       // Start game
       playGameStartSound()
@@ -174,8 +178,10 @@ class ViewController: UIViewController {
     if isCorrectAnswer {
       correctQuestions += 1
       questionField.text = "Correct!"
+      AudioServicesPlaySystemSound(correctAnswerSound)
     } else {
       questionField.text = "Sorry, wrong answer!"
+      AudioServicesPlaySystemSound(wrongAnswerSound)
     }
     
     loadNextQuestionWithDelay(seconds: 2)
@@ -226,6 +232,28 @@ class ViewController: UIViewController {
           Bundle.main.path(forResource: "GameSound", ofType: "wav")
       let soundURL = URL(fileURLWithPath: pathToSoundFile!)
       AudioServicesCreateSystemSoundID(soundURL as CFURL, &gameSound)
+  }
+  
+  
+  /**
+   * Load correct answer sound.
+   */
+  fileprivate func loadCorrectAnswerSound() {
+    let pathToSoundFile =
+      Bundle.main.path(forResource: "correct", ofType: "wav")
+    let soundURL = URL(fileURLWithPath: pathToSoundFile!)
+    AudioServicesCreateSystemSoundID(soundURL as CFURL, &correctAnswerSound)
+  }
+  
+  
+  /**
+   * Load wrong answer sound.
+   */
+  fileprivate func loadWrongAnswerSound() {
+    let pathToSoundFile =
+      Bundle.main.path(forResource: "wrong", ofType: "wav")
+    let soundURL = URL(fileURLWithPath: pathToSoundFile!)
+    AudioServicesCreateSystemSoundID(soundURL as CFURL, &wrongAnswerSound)
   }
 
 
