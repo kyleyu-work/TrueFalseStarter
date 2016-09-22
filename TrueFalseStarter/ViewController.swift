@@ -11,7 +11,7 @@ import AudioToolbox
 
 class ViewController: UIViewController {
   
-  fileprivate let questionsPerRound = 6
+  fileprivate let questionsPerRound = 3
 
   fileprivate var questionPool: QuestionPool?
   fileprivate var questionsAsked = 0
@@ -83,7 +83,14 @@ class ViewController: UIViewController {
       var idx = 0
       for choice in selectedQuestion.getQuestionChoices() {
         answerButtons[idx].setTitle(choice, for: UIControlState.normal)
+        answerButtons[idx].setTitle(choice, for: UIControlState.disabled)
+        answerButtons[idx].setTitleColor(
+            UIColor.white, for: UIControlState.normal)
+        answerButtons[idx].setTitleColor(
+            UIColor.white, for: UIControlState.disabled)
+        answerButtons[idx].isEnabled = true
         answerButtons[idx].isHidden = false
+        
         idx += 1
       }
       
@@ -147,8 +154,24 @@ class ViewController: UIViewController {
   @IBAction func checkAnswer(_ sender: UIButton) {
     // Increment the questions asked counter
     questionsAsked += 1
+    let isCorrectAnswer = questionPool!.checkAnswer(sender.currentTitle!)
+    for answerButton in answerButtons {
+      if let answer = answerButton.currentTitle  {
+        if questionPool!.checkAnswer(answer) {
+          answerButton.setTitle(
+            "✔︎   \(answerButton.currentTitle!)", for: UIControlState.disabled)
+          answerButton.setTitleColor(
+              UIColor.green, for: UIControlState.disabled)
+        } else if answerButton === sender {
+          answerButton.setTitle(
+            "✘   \(answerButton.currentTitle!)", for: UIControlState.disabled)
+          answerButton.setTitleColor(UIColor.red, for: UIControlState.disabled)
+        }
+        answerButton.isEnabled = false
+      }
+    }
     
-    if questionPool!.checkAnswer(sender.currentTitle!) {
+    if isCorrectAnswer {
       correctQuestions += 1
       questionField.text = "Correct!"
     } else {

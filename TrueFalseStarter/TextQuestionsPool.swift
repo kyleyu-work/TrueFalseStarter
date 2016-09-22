@@ -18,13 +18,10 @@ class TextQuestionsPool: QuestionPool {
   
   init() {
     // Questions for test
-    let q1 = Question("Only female koalas can whistle", ["True", "False"], 1)
-    let q2 = Question("Blue whales are technically whales", ["True", "False"], 0)
-    let q3 = Question("Camels are cannibalistic", ["True", "False"], 1)
-    let q4 = Question("All ducks are birds", ["True", "False"], 0)
-    let q5 = Question("What is the best progamming lanuage?", ["Java", "C++", "Phython", "Go"], 1)
-    let q6 = Question("How about iPhone 7?", ["Awesome!", "Not fun", "Just so so"], 0)
-    self.questionsPool = [q5, q6, q1, q2, q3, q4]
+    let q1 = Question("All ducks are birds", ["True", "False"], 0)
+    let q2 = Question("What is the best progamming lanuage?", ["Java", "C++", "Phython", "Go"], 1)
+    let q3 = Question("How about iPhone 7?", ["Awesome!", "Not fun", "Just so so"], 0)
+    self.questionsPool = [q1, q2, q3]
     
     self.selectedQuestionIndex = 0
     askedQuestionsSet = Set<String>()
